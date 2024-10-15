@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Blog Post</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Edit Blog Post</h1>
+    <% if (loggedInUserId === post.creator_user_id) { %>
+        <form action="/edit/<%= post.blog_id %>?user_id=<%= loggedInUserId %>" method="POST">
+            <input type="hidden" name="user_id" value="<%= loggedInUserId %>">
+            
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" value="<%= post.title %>" required>
+
+            <label for="content">Content</label>
+            <textarea id="content" name="content" required><%= post.body %></textarea>
+
+            <button type="submit">Update Post</button>
+        </form>
+    <% } else { %>
+        <p>You are not authorized to edit this post.</p>
+    <% } %>
+
+    <a href="/?user_id=<%= loggedInUserId %>">Back to Home</a>
+</body>
+</html>
