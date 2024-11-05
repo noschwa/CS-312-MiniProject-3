@@ -1,5 +1,5 @@
 body {
-  font-family: 'Times New Roman', serif;
+  font-family: "Times New Roman", serif;
   padding: 20px;
   background-color: #735da5;
 }
@@ -13,7 +13,7 @@ h2 {
 }
 
 .text-field {
-  font-family: 'Times New Roman', serif;
+  font-family: "Times New Roman", serif;
   width: 25%;
   padding: 10px;
   margin: 5px;
@@ -28,7 +28,7 @@ h2 {
 }
 
 button {
-  font-family: 'Times New Roman', serif;
+  font-family: "Times New Roman", serif;
   padding: 10px;
   margin: 5px;
   border-radius: 5px;
